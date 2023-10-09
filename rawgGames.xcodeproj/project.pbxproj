@@ -7,17 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D20D8BF2ACA3C5300A5420A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D20D8BE2ACA3C5300A5420A /* GameCell.swift */; };
+		5D20D8C62ACA4E1D00A5420A /* GameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D20D8C52ACA4E1D00A5420A /* GameResponse.swift */; };
+		5D20D8C82ACA4F6300A5420A /* GameDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D20D8C72ACA4F6300A5420A /* GameDataSource.swift */; };
+		5D20D8CA2ACA614600A5420A /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D20D8C92ACA614600A5420A /* APICall.swift */; };
+		5D20D8CC2ACA676500A5420A /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D20D8CB2ACA676500A5420A /* GameRepository.swift */; };
+		5D20D8CF2ACA6A6300A5420A /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D20D8CE2ACA6A6300A5420A /* GameInteractor.swift */; };
+		5D20D8D22ACA752700A5420A /* GameInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D20D8D12ACA752700A5420A /* GameInjection.swift */; };
+		5D20D8D42ACA757800A5420A /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D20D8D32ACA757800A5420A /* GamePresenter.swift */; };
+		5D20D8D62ACA788900A5420A /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D20D8D52ACA788900A5420A /* GameRouter.swift */; };
 		5D5237462AC81C2000E22B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5237452AC81C2000E22B63 /* AppDelegate.swift */; };
 		5D5237482AC81C2000E22B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5237472AC81C2000E22B63 /* SceneDelegate.swift */; };
 		5D52374F2AC81C2200E22B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D52374E2AC81C2200E22B63 /* Assets.xcassets */; };
 		5D5237522AC81C2200E22B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5237502AC81C2200E22B63 /* LaunchScreen.storyboard */; };
 		5D5237642AC81F4600E22B63 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5237632AC81F4600E22B63 /* MainTabBarController.swift */; };
-		5D5237662AC81F5500E22B63 /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5237652AC81F5500E22B63 /* GameListViewController.swift */; };
+		5D5237662AC81F5500E22B63 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5237652AC81F5500E22B63 /* GameViewController.swift */; };
 		5D52376A2AC8208700E22B63 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5237692AC8208700E22B63 /* UIView.swift */; };
 		5D52376C2AC84D0900E22B63 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D52376B2AC84D0900E22B63 /* UIColor.swift */; };
+		5DCAFA822AD3D3270021C6C2 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFA812AD3D3270021C6C2 /* GameModel.swift */; };
+		5DCAFA862AD3E1500021C6C2 /* GameMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFA852AD3E1500021C6C2 /* GameMapper.swift */; };
+		5DCAFA882AD4048E0021C6C2 /* UICollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFA872AD4048E0021C6C2 /* UICollectionViewLayout.swift */; };
+		5DCAFA8A2AD42F060021C6C2 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFA892AD42F060021C6C2 /* UILabel.swift */; };
+		7879E94F9F7FC03D8DAC0241 /* Pods_rawgGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD9F9E41C514CB4306E8415 /* Pods_rawgGames.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BD9F9E41C514CB4306E8415 /* Pods_rawgGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rawgGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4222C4898E9224543466226E /* Pods-rawgGames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rawgGames.debug.xcconfig"; path = "Target Support Files/Pods-rawgGames/Pods-rawgGames.debug.xcconfig"; sourceTree = "<group>"; };
+		5D20D8BE2ACA3C5300A5420A /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		5D20D8C52ACA4E1D00A5420A /* GameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResponse.swift; sourceTree = "<group>"; };
+		5D20D8C72ACA4F6300A5420A /* GameDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataSource.swift; sourceTree = "<group>"; };
+		5D20D8C92ACA614600A5420A /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		5D20D8CB2ACA676500A5420A /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		5D20D8CE2ACA6A6300A5420A /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
+		5D20D8D12ACA752700A5420A /* GameInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInjection.swift; sourceTree = "<group>"; };
+		5D20D8D32ACA757800A5420A /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		5D20D8D52ACA788900A5420A /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
 		5D5237422AC81C2000E22B63 /* rawgGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rawgGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5237452AC81C2000E22B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D5237472AC81C2000E22B63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,9 +50,14 @@
 		5D5237512AC81C2200E22B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D5237532AC81C2200E22B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D5237632AC81F4600E22B63 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		5D5237652AC81F5500E22B63 /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
+		5D5237652AC81F5500E22B63 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5D5237692AC8208700E22B63 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		5D52376B2AC84D0900E22B63 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		5DCAFA812AD3D3270021C6C2 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		5DCAFA852AD3E1500021C6C2 /* GameMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMapper.swift; sourceTree = "<group>"; };
+		5DCAFA872AD4048E0021C6C2 /* UICollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewLayout.swift; sourceTree = "<group>"; };
+		5DCAFA892AD42F060021C6C2 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		DBEF4F9459706A4067D78392 /* Pods-rawgGames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rawgGames.release.xcconfig"; path = "Target Support Files/Pods-rawgGames/Pods-rawgGames.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,15 +65,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7879E94F9F7FC03D8DAC0241 /* Pods_rawgGames.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23EC7B8736AFC2404BF18A47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4222C4898E9224543466226E /* Pods-rawgGames.debug.xcconfig */,
+				DBEF4F9459706A4067D78392 /* Pods-rawgGames.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5405129278E154392E3F6306 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BD9F9E41C514CB4306E8415 /* Pods_rawgGames.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5D20D8B72AC99FE400A5420A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5D20D8C92ACA614600A5420A /* APICall.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -51,8 +100,49 @@
 		5D20D8B82AC99FEB00A5420A /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
+				5DCAFA852AD3E1500021C6C2 /* GameMapper.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		5D20D8C02ACA4DE500A5420A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DCAFA812AD3D3270021C6C2 /* GameModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D20D8C12ACA4DEA00A5420A /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				5D20D8CE2ACA6A6300A5420A /* GameInteractor.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		5D20D8C22ACA4DF500A5420A /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				5D20D8C42ACA4E0A00A5420A /* Response */,
+				5D20D8C72ACA4F6300A5420A /* GameDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		5D20D8C32ACA4DFA00A5420A /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		5D20D8C42ACA4E0A00A5420A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				5D20D8C52ACA4E1D00A5420A /* GameResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		5D5237392AC81C2000E22B63 = {
@@ -60,6 +150,8 @@
 			children = (
 				5D5237442AC81C2000E22B63 /* rawgGames */,
 				5D5237432AC81C2000E22B63 /* Products */,
+				23EC7B8736AFC2404BF18A47 /* Pods */,
+				5405129278E154392E3F6306 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,10 +179,9 @@
 		5D5237592AC81DF900E22B63 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5D5237602AC81E5400E22B63 /* Data */,
 				5D5237622AC81E6D00E22B63 /* Domain */,
 				5D5237612AC81E6800E22B63 /* Utils */,
-				5D5237602AC81E5400E22B63 /* Data */,
-				5D52375F2AC81E4F00E22B63 /* DI */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -107,9 +198,8 @@
 		5D52375B2AC81E1400E22B63 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				5D52375E2AC81E3700E22B63 /* View */,
-				5D52375D2AC81E3200E22B63 /* Presenter */,
-				5D52375C2AC81E2E00E22B63 /* Router */,
+				5DCAFA842AD3D3650021C6C2 /* Home */,
+				5DCAFA832AD3D33D0021C6C2 /* Game */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -117,6 +207,7 @@
 		5D52375C2AC81E2E00E22B63 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				5D20D8D52ACA788900A5420A /* GameRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -124,6 +215,7 @@
 		5D52375D2AC81E3200E22B63 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				5D20D8D32ACA757800A5420A /* GamePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -131,8 +223,8 @@
 		5D52375E2AC81E3700E22B63 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5D5237632AC81F4600E22B63 /* MainTabBarController.swift */,
-				5D5237652AC81F5500E22B63 /* GameListViewController.swift */,
+				5D20D8BE2ACA3C5300A5420A /* GameCell.swift */,
+				5D5237652AC81F5500E22B63 /* GameViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +232,7 @@
 		5D52375F2AC81E4F00E22B63 /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				5D20D8D12ACA752700A5420A /* GameInjection.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -147,6 +240,9 @@
 		5D5237602AC81E5400E22B63 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5D20D8C32ACA4DFA00A5420A /* Locale */,
+				5D20D8C22ACA4DF500A5420A /* Remote */,
+				5D20D8CB2ACA676500A5420A /* GameRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -164,6 +260,9 @@
 		5D5237622AC81E6D00E22B63 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				5D52375F2AC81E4F00E22B63 /* DI */,
+				5D20D8C12ACA4DEA00A5420A /* UseCase */,
+				5D20D8C02ACA4DE500A5420A /* Model */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -181,8 +280,28 @@
 			children = (
 				5D5237692AC8208700E22B63 /* UIView.swift */,
 				5D52376B2AC84D0900E22B63 /* UIColor.swift */,
+				5DCAFA872AD4048E0021C6C2 /* UICollectionViewLayout.swift */,
+				5DCAFA892AD42F060021C6C2 /* UILabel.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5DCAFA832AD3D33D0021C6C2 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				5D52375C2AC81E2E00E22B63 /* Router */,
+				5D52375D2AC81E3200E22B63 /* Presenter */,
+				5D52375E2AC81E3700E22B63 /* View */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		5DCAFA842AD3D3650021C6C2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5D5237632AC81F4600E22B63 /* MainTabBarController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +311,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D5237562AC81C2200E22B63 /* Build configuration list for PBXNativeTarget "rawgGames" */;
 			buildPhases = (
+				5601205F11927B45823A55B1 /* [CP] Check Pods Manifest.lock */,
 				5D52373E2AC81C2000E22B63 /* Sources */,
 				5D52373F2AC81C2000E22B63 /* Frameworks */,
 				5D5237402AC81C2000E22B63 /* Resources */,
+				D6427B1FAD79F69605FAF112 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,7 +334,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					5D5237412AC81C2000E22B63 = {
 						CreatedOnToolsVersion = 14.1;
@@ -250,16 +371,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5601205F11927B45823A55B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rawgGames-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6427B1FAD79F69605FAF112 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rawgGames/Pods-rawgGames-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rawgGames/Pods-rawgGames-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rawgGames/Pods-rawgGames-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5D52373E2AC81C2000E22B63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D20D8D42ACA757800A5420A /* GamePresenter.swift in Sources */,
 				5D52376A2AC8208700E22B63 /* UIView.swift in Sources */,
+				5D20D8BF2ACA3C5300A5420A /* GameCell.swift in Sources */,
+				5D20D8CA2ACA614600A5420A /* APICall.swift in Sources */,
+				5D20D8C82ACA4F6300A5420A /* GameDataSource.swift in Sources */,
 				5D52376C2AC84D0900E22B63 /* UIColor.swift in Sources */,
-				5D5237662AC81F5500E22B63 /* GameListViewController.swift in Sources */,
+				5D20D8C62ACA4E1D00A5420A /* GameResponse.swift in Sources */,
+				5DCAFA8A2AD42F060021C6C2 /* UILabel.swift in Sources */,
+				5D20D8CC2ACA676500A5420A /* GameRepository.swift in Sources */,
+				5D5237662AC81F5500E22B63 /* GameViewController.swift in Sources */,
+				5D20D8D22ACA752700A5420A /* GameInjection.swift in Sources */,
+				5DCAFA822AD3D3270021C6C2 /* GameModel.swift in Sources */,
+				5DCAFA862AD3E1500021C6C2 /* GameMapper.swift in Sources */,
+				5D20D8D62ACA788900A5420A /* GameRouter.swift in Sources */,
 				5D5237462AC81C2000E22B63 /* AppDelegate.swift in Sources */,
 				5D5237482AC81C2000E22B63 /* SceneDelegate.swift in Sources */,
+				5D20D8CF2ACA6A6300A5420A /* GameInteractor.swift in Sources */,
+				5DCAFA882AD4048E0021C6C2 /* UICollectionViewLayout.swift in Sources */,
 				5D5237642AC81F4600E22B63 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +490,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -374,6 +551,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -394,12 +572,14 @@
 		};
 		5D5237572AC81C2200E22B63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4222C4898E9224543466226E /* Pods-rawgGames.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3HH926728D;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = rawgGames/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -421,12 +601,14 @@
 		};
 		5D5237582AC81C2200E22B63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBEF4F9459706A4067D78392 /* Pods-rawgGames.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3HH926728D;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = rawgGames/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -18,14 +18,8 @@ class MainTabBarController: UITabBarController {
     
     private func configureController() {
         view.backgroundColor = .white
-//        let movieListVC = MovieListViewController()
-//        let di = MovieListDI.init().provideMovieList()
-//        let movieListUseCase = MovieListPresenter(movieListUseCase: di, movieListView: movieListVC)
-       
-//        movieListVC.movieListPresenter = movieListUseCase
-        let gamesListVC = GameListViewController()
-        let games = setupNavigationController(title: "Games", inactiveImage: UIImage(systemName: "film")!, activeImage: UIImage(systemName: "gamecontroller.fill")!, rootViewController: gamesListVC)
-//        let tvShows = setupNavigationController(title: "TV Shows", inactiveImage: UIImage(systemName: "tv")!, activeImage: UIImage(systemName: "tv.fill")!, rootViewController: TVShowsController())
+        let gamesListVC = GameRouter.startGame()
+        let games = setupNavigationController(title: "Games", inactiveImage: UIImage(systemName: "gamecontroller")!, activeImage: UIImage(systemName: "gamecontroller.fill")!, rootViewController: gamesListVC)
         
         setViewControllers([games], animated: true)
         
