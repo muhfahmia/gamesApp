@@ -13,7 +13,7 @@ protocol GameViewProtocol {
     func updateSuccessGame(with games: [GameModel])
 }
 
-class GameViewController: UIViewController, GameViewProtocol {
+class GameViewController: UIViewController, GameViewProtocol, UICollectionViewDelegate {
     
     enum SectionLayout: Int, CaseIterable {
         case gameList
@@ -45,6 +45,7 @@ class GameViewController: UIViewController, GameViewProtocol {
     func setupCollectionView() {
         self.customCollectionLayout.customPadding(padding: 10, width: view.bounds.width, height: view.bounds.height/4, grid: 2)
         collectionView.collectionViewLayout = self.customCollectionLayout
+        collectionView.delegate = self
         collectionView.backgroundColor = .lightGrayCustom
         view.addSubview(collectionView)
         collectionView.anchor(top: self.view.safeAreaLayoutGuide.topAnchor, left: self.view.leftAnchor, bottom: self.view.safeAreaLayoutGuide.bottomAnchor, right: self.view.rightAnchor)
@@ -64,6 +65,10 @@ class GameViewController: UIViewController, GameViewProtocol {
             }
         )
         self.gameDataSnapshot.appendSections([.gameList])
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        gamePresenter?.routeToDetailGame(indexPath: indexPath)
     }
 }
 

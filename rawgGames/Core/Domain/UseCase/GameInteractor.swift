@@ -8,6 +8,7 @@
 import Foundation
 protocol GameUseCase {
     func getGame(completion: @escaping (Result<[GameModel], Error>) -> Void)
+    func getGameDetail(withID id: Int, completion: @escaping (Result<GameModel, Error>) -> Void)
 }
 
 class GameInteractor: GameUseCase {
@@ -19,6 +20,12 @@ class GameInteractor: GameUseCase {
     
     func getGame(completion: @escaping (Result<[GameModel], Error>) -> Void) {
         gameRepository.getGame {
+            result in completion(result)
+        }
+    }
+    
+    func getGameDetail(withID id: Int, completion: @escaping (Result<GameModel, Error>) -> Void) {
+        gameRepository.getGameDetail(withID: id) {
             result in completion(result)
         }
     }

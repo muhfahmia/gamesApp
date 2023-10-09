@@ -8,16 +8,20 @@
 import Foundation
 
 protocol GamePresenterProtocol {
+    var games: [GameModel] { get set }
     var gameView: GameViewProtocol? { get set }
-    var gamePresenter: GamePresenterProtocol? { get set }
+    var gameRouter: GameRouterProtocol? { get set }
     var gameInteractor: GameUseCase? { get set}
     func getGame()
+    func routeToDetailGame(indexPath: IndexPath)
 }
 
 class GamePresenter: GamePresenterProtocol {
     
+    var games: [GameModel] = []
+
     var gameView: GameViewProtocol?
-    var gamePresenter: GamePresenterProtocol?
+    var gameRouter: GameRouterProtocol?
     var gameInteractor: GameUseCase?
     
     init(gameInteractor: GameUseCase) {
@@ -25,16 +29,19 @@ class GamePresenter: GamePresenterProtocol {
     }
     
     func getGame() {
-        print("get game from presenter")
         self.gameInteractor?.getGame{ result in
             switch result {
             case .success(let data):
+                self.games = data
                 self.gameView?.updateSuccessGame(with: data)
             case .failure(let error):
                 print(error)
-//                self.gameView?.updateGame()
             }
         }
+    }
+    
+    func routeToDetailGame(indexPath: IndexPath) {
+        gameRouter?.routeToGameDetail(withID: self.games[indexPath.row].id, on: self.gameView!)
     }
 }
 

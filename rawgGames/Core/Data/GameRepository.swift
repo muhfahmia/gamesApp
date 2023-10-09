@@ -9,6 +9,7 @@ import Foundation
 
 protocol GameRepositoryProtocol {
     func getGame(completion: @escaping (Result<[GameModel], Error>) -> Void)
+    func getGameDetail(withID id: Int, completion: @escaping (Result<GameModel, Error>) -> Void)
 }
 
 class GameRepository: GameRepositoryProtocol {
@@ -20,11 +21,22 @@ class GameRepository: GameRepositoryProtocol {
     }
     
     func getGame(completion: @escaping (Result<[GameModel], Error>) -> Void) {
-        gameDataSource.getGameDataSource(completion: {
-            result in
+        gameDataSource.getGameDataSource(completion: { result in
             switch result {
             case .success(let data):
                 let gameModel = GameMapper.mapGameResponsesToDomains(input: data)
+                completion(.success(gameModel))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
+    }
+    
+    func getGameDetail(withID id: Int, completion: @escaping (Result<GameModel, Error>) -> Void) {
+        gameDataSource.getGameDetailDataSource(withID: id, completion: { result in
+            switch result {
+            case .success(let data):
+                let gameModel = GameMapper.mapGameResponseDetailToDomains(input: data)
                 completion(.success(gameModel))
             case .failure(let error):
                 completion(.failure(error))

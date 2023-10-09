@@ -26,11 +26,13 @@ enum Endpoints {
       
     case gameList
       case gameListMirror
+      case gameDetail(id: Int)
       
     public var url: String {
         switch self {
         case .gameList: return "\(APIConfig.baseUrl)games"
         case .gameListMirror: return "https://rawg-mirror.vercel.app/api/games"
+        case .gameDetail(let id): return "https://rawg-mirror.vercel.app/api/games/\(id)"
         }
     }
   }

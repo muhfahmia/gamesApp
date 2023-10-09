@@ -10,9 +10,11 @@ import UIKit
 
 protocol GameRouterProtocol {
     static func startGame() -> UIViewController
+    func routeToGameDetail(withID id: Int, on view: GameViewProtocol)
 }
 
 class GameRouter: GameRouterProtocol {
+    
     static func startGame() -> UIViewController {
         
         let gameRepository = GameRepository(gameDataSource: GameDataSource.remoteGameDataSource)
@@ -21,6 +23,16 @@ class GameRouter: GameRouterProtocol {
         let gameVC = GameViewController()
         gameVC.gamePresenter = gamePresenter
         gameVC.gamePresenter?.gameView = gameVC
+        gamePresenter.gameRouter = GameRouter()
         return gameVC
     }
+    
+    func routeToGameDetail(withID id: Int, on view: GameViewProtocol) {
+        let gameDetailVC = GameDetailViewController()
+        gameDetailVC.hidesBottomBarWhenPushed = true
+        let gameVC = view as? GameViewController
+        gameVC?.navigationController?.pushViewController(gameDetailVC, animated: true)
+        print("success: \(id)")
+    }
+    
 }

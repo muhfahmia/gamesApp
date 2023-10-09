@@ -107,3 +107,37 @@ extension UIView {
                bottom: view.bottomAnchor, right: view.rightAnchor)
     }
 }
+
+func setStarRating(view starStackView: UIStackView, rating: Double) -> UIStackView {
+    // Clear existing stars
+    var rating = rating
+    starStackView.alignment = .center
+    starStackView.distribution = .fillEqually
+    
+    for view in starStackView.arrangedSubviews {
+        starStackView.removeArrangedSubview(view)
+        view.removeFromSuperview()
+    }
+    
+    // Create new star images based on the rating
+    for _ in 1...5 {
+        let starImageView = UIImageView()
+        var starImage: String
+        if rating >= 1 {
+            starImage = "star.fill"
+        }else if rating >= 0.5 && rating <= 0.9 {
+            starImage = "star.leadinghalf.filled"
+        }else{
+            starImage = "star"
+        }
+        rating -= 1
+        let image = UIImage(systemName: starImage)
+        starImageView.image = image
+        starImageView.tintColor = UIColor.systemYellow
+        
+        
+        starStackView.addArrangedSubview(starImageView)
+    }
+    
+    return starStackView
+}

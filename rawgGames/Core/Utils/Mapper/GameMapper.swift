@@ -27,9 +27,16 @@ final class GameMapper {
             )
             gameModel.append(game)
         }
-    
         return gameModel
-        
+    }
+    
+    static func mapGameResponseDetailToDomains(input gameResponses: GameResponse) -> GameModel {
+        var genres: [GameGenres] = []
+        for genre in gameResponses.genres {
+            genres.append(GameGenres(name: genre.name))
+        }
+        let model = GameModel(id: gameResponses.id, name: gameResponses.name, rating: gameResponses.rating, releaseDate: gameResponses.releaseDate, backgroundImage: gameResponses.backgroundImage, description: gameResponses.description, genres: genres)
+        return model
     }
 }
 
