@@ -28,7 +28,6 @@ class GameViewController: UIViewController, GameViewProtocol, UICollectionViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Games"
-        self.view.backgroundColor = .white
         setupCollectionView()
         setupCollectionViewDataSource()
         setupCollectionCell()

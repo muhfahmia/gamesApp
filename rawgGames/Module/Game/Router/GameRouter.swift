@@ -28,11 +28,10 @@ class GameRouter: GameRouterProtocol {
     }
     
     func routeToGameDetail(withID id: Int, on view: GameViewProtocol) {
-        let gameDetailVC = GameDetailViewController()
+        let gameDetailVC = GameDetailRouter.routeToGameDetail(withID: id)
         gameDetailVC.hidesBottomBarWhenPushed = true
         let gameVC = view as? GameViewController
         gameVC?.navigationController?.pushViewController(gameDetailVC, animated: true)
-        print("success: \(id)")
     }
     
 }

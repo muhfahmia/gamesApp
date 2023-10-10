@@ -9,5 +9,6 @@ target 'rawgGames' do
 
 pod 'Alamofire'
 pod 'SDWebImage'
+pod 'SkeletonView'
 
 end

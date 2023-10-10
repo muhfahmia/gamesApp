@@ -7,4 +7,6 @@
 
 import Foundation
 
-final class GameInjection {}
+final class GameInjection {
+    
+}

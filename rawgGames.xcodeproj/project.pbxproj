@@ -31,6 +31,12 @@
 		5DCAFA902AD454070021C6C2 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFA8F2AD454070021C6C2 /* GameDetailViewController.swift */; };
 		5DCAFA922AD454A20021C6C2 /* GameDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFA912AD454A20021C6C2 /* GameDetailPresenter.swift */; };
 		5DCAFA942AD4553C0021C6C2 /* GameDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFA932AD4553C0021C6C2 /* GameDetailRouter.swift */; };
+		5DCAFA962AD505B50021C6C2 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFA952AD505B50021C6C2 /* UIScrollView.swift */; };
+		5DCAFA982AD543150021C6C2 /* MyChips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFA972AD543150021C6C2 /* MyChips.swift */; };
+		5DCAFA9A2AD563F80021C6C2 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFA992AD563F80021C6C2 /* UIButton.swift */; };
+		5DCAFA9F2AD595300021C6C2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFA9E2AD595300021C6C2 /* AboutViewController.swift */; };
+		5DCAFAA22AD595530021C6C2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFAA12AD595530021C6C2 /* FavoriteViewController.swift */; };
+		5DCAFAA62AD5961B0021C6C2 /* Game.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFAA42AD5961B0021C6C2 /* Game.xcdatamodeld */; };
 		7879E94F9F7FC03D8DAC0241 /* Pods_rawgGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD9F9E41C514CB4306E8415 /* Pods_rawgGames.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +69,12 @@
 		5DCAFA8F2AD454070021C6C2 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		5DCAFA912AD454A20021C6C2 /* GameDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailPresenter.swift; sourceTree = "<group>"; };
 		5DCAFA932AD4553C0021C6C2 /* GameDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailRouter.swift; sourceTree = "<group>"; };
+		5DCAFA952AD505B50021C6C2 /* UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
+		5DCAFA972AD543150021C6C2 /* MyChips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChips.swift; sourceTree = "<group>"; };
+		5DCAFA992AD563F80021C6C2 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		5DCAFA9E2AD595300021C6C2 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		5DCAFAA12AD595530021C6C2 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		5DCAFAA52AD5961B0021C6C2 /* Game.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Game.xcdatamodel; sourceTree = "<group>"; };
 		DBEF4F9459706A4067D78392 /* Pods-rawgGames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rawgGames.release.xcconfig"; path = "Target Support Files/Pods-rawgGames/Pods-rawgGames.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +151,7 @@
 		5D20D8C32ACA4DFA00A5420A /* Locale */ = {
 			isa = PBXGroup;
 			children = (
+				5DCAFAA32AD596070021C6C2 /* CoreModel */,
 			);
 			path = Locale;
 			sourceTree = "<group>";
@@ -204,8 +217,10 @@
 		5D52375B2AC81E1400E22B63 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5DCAFA9C2AD595100021C6C2 /* About */,
+				5DCAFA9B2AD5950B0021C6C2 /* Favorite */,
 				5DCAFA8B2AD4511B0021C6C2 /* GameDetail */,
-				5DCAFA842AD3D3650021C6C2 /* Home */,
+				5DCAFA842AD3D3650021C6C2 /* TabBar */,
 				5DCAFA832AD3D33D0021C6C2 /* Game */,
 			);
 			path = Module;
@@ -289,6 +304,9 @@
 				5D52376B2AC84D0900E22B63 /* UIColor.swift */,
 				5DCAFA872AD4048E0021C6C2 /* UICollectionViewLayout.swift */,
 				5DCAFA892AD42F060021C6C2 /* UILabel.swift */,
+				5DCAFA952AD505B50021C6C2 /* UIScrollView.swift */,
+				5DCAFA972AD543150021C6C2 /* MyChips.swift */,
+				5DCAFA992AD563F80021C6C2 /* UIButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -303,12 +321,12 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
-		5DCAFA842AD3D3650021C6C2 /* Home */ = {
+		5DCAFA842AD3D3650021C6C2 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				5D5237632AC81F4600E22B63 /* MainTabBarController.swift */,
 			);
-			path = Home;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		5DCAFA8B2AD4511B0021C6C2 /* GameDetail */ = {
@@ -343,6 +361,46 @@
 				5DCAFA8F2AD454070021C6C2 /* GameDetailViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5DCAFA9B2AD5950B0021C6C2 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				5DCAFAA02AD595340021C6C2 /* View */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		5DCAFA9C2AD595100021C6C2 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				5DCAFA9D2AD595260021C6C2 /* View */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		5DCAFA9D2AD595260021C6C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DCAFA9E2AD595300021C6C2 /* AboutViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DCAFAA02AD595340021C6C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DCAFAA12AD595530021C6C2 /* FavoriteViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DCAFAA32AD596070021C6C2 /* CoreModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DCAFAA42AD5961B0021C6C2 /* Game.xcdatamodeld */,
+			);
+			path = CoreModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,7 +522,10 @@
 				5D20D8D42ACA757800A5420A /* GamePresenter.swift in Sources */,
 				5DCAFA902AD454070021C6C2 /* GameDetailViewController.swift in Sources */,
 				5D52376A2AC8208700E22B63 /* UIView.swift in Sources */,
+				5DCAFA9A2AD563F80021C6C2 /* UIButton.swift in Sources */,
+				5DCAFA982AD543150021C6C2 /* MyChips.swift in Sources */,
 				5D20D8BF2ACA3C5300A5420A /* GameCell.swift in Sources */,
+				5DCAFA962AD505B50021C6C2 /* UIScrollView.swift in Sources */,
 				5D20D8CA2ACA614600A5420A /* APICall.swift in Sources */,
 				5D20D8C82ACA4F6300A5420A /* GameDataSource.swift in Sources */,
 				5D52376C2AC84D0900E22B63 /* UIColor.swift in Sources */,
@@ -475,11 +536,14 @@
 				5D20D8D22ACA752700A5420A /* GameInjection.swift in Sources */,
 				5DCAFA822AD3D3270021C6C2 /* GameModel.swift in Sources */,
 				5DCAFA862AD3E1500021C6C2 /* GameMapper.swift in Sources */,
+				5DCAFAA62AD5961B0021C6C2 /* Game.xcdatamodeld in Sources */,
 				5D20D8D62ACA788900A5420A /* GameRouter.swift in Sources */,
 				5D5237462AC81C2000E22B63 /* AppDelegate.swift in Sources */,
 				5D5237482AC81C2000E22B63 /* SceneDelegate.swift in Sources */,
+				5DCAFAA22AD595530021C6C2 /* FavoriteViewController.swift in Sources */,
 				5D20D8CF2ACA6A6300A5420A /* GameInteractor.swift in Sources */,
 				5DCAFA882AD4048E0021C6C2 /* UICollectionViewLayout.swift in Sources */,
+				5DCAFA9F2AD595300021C6C2 /* AboutViewController.swift in Sources */,
 				5D5237642AC81F4600E22B63 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -694,6 +758,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5DCAFAA42AD5961B0021C6C2 /* Game.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5DCAFAA52AD5961B0021C6C2 /* Game.xcdatamodel */,
+			);
+			currentVersion = 5DCAFAA52AD5961B0021C6C2 /* Game.xcdatamodel */;
+			path = Game.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5D52373A2AC81C2000E22B63 /* Project object */;
 }
