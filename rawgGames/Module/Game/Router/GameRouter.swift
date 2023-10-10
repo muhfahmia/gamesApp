@@ -17,7 +17,7 @@ class GameRouter: GameRouterProtocol {
     
     static func startGame() -> UIViewController {
         
-        let gameRepository = GameRepository(gameDataSource: GameDataSource.remoteGameDataSource)
+        let gameRepository = GameRepository(gameDataSource: GameDataSource.remoteGameDataSource, gameFavoDataSource: GameFavoriteDataSource.sharedMovieFavoSource)
         let gameInteractor = GameInteractor(gameRepository: gameRepository)
         let gamePresenter = GamePresenter(gameInteractor: gameInteractor)
         let gameVC = GameViewController()

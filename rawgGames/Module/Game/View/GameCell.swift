@@ -17,6 +17,7 @@ class GameCell: UICollectionViewCell {
     let gameReleased = MyLabel(labelType: .ParagraphSmall, labelColor: .black, labelNumRow: .one)
     let gameRelease = MyLabel(labelType: .ParagraphSmall, labelColor: .black, labelNumRow: .one)
     let gameRating = UIStackView()
+    var deleteBtn: CustomButton?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,6 +33,12 @@ class GameCell: UICollectionViewCell {
         self.addSubview(gameRelease)
         self.addSubview(gameRating)
         gameImage.setHeight(100)
+    }
+    
+    func setupDeleteButton() {
+        deleteBtn = CustomButton(style: .danger, title: "Delete Favorite")
+        self.addSubview(deleteBtn!)
+        deleteBtn?.anchor(top: gameRating.bottomAnchor, left: self.leftAnchor, right: self.rightAnchor, paddingLeft: 15, paddingBottom: 10, paddingRight: 15)
     }
     
     func setupUIAutoLayout() {

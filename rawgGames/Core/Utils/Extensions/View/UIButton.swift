@@ -21,6 +21,7 @@ class CustomButton: UIButton {
         case primary
         case secondary
         case white
+        case danger
     }
 
     // Store the current button style
@@ -62,10 +63,17 @@ class CustomButton: UIButton {
             self.backgroundColor = .white
             self.setTitleColor(.black, for: .normal)
             self.layer.cornerRadius = 8
+        case .danger:
+            self.backgroundColor = .systemRed
+            self.setTitleColor(.white, for: .normal)
+            self.layer.cornerRadius = 8
         }
     }
     
     func withSystemIcon(name: String) {
+        var config = UIButton.Configuration.plain()
+        config.imagePadding = 10
         self.setImage(UIImage(systemName: name), for: .normal)
+        self.configuration = config
     }
 }

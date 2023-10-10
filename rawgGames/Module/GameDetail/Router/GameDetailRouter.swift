@@ -15,8 +15,9 @@ protocol GameDetailRouterProtocol {
 class GameDetailRouter: GameDetailRouterProtocol {
     static func routeToGameDetail(withID id: Int) -> UIViewController {
         let gameDetailVC = GameDetailViewController()
-        let provideRepo = GameDataSource.remoteGameDataSource
-        let gameRepo = GameRepository(gameDataSource: provideRepo)
+        let provideGameDataSource = GameDataSource.remoteGameDataSource
+        let provideGameFavoSource = GameFavoriteDataSource.sharedMovieFavoSource
+        let gameRepo = GameRepository(gameDataSource: provideGameDataSource, gameFavoDataSource: provideGameFavoSource)
         let gameInteractor = GameInteractor(gameRepository: gameRepo)
         let gameDetailPresenter = GameDetailPresenter(gameDetailInteractor: gameInteractor)
         gameDetailPresenter.gameDetailID = id

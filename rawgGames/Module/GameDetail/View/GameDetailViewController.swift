@@ -12,6 +12,7 @@ import SDWebImage
 protocol GameDetailViewProtocol {
     var gameDetailPresenter: GameDetailPresenterProtocol? { get set }
     func updateSuccesGame(with game: GameModel)
+    func updateStateFavoriteBtn(with state: String)
 }
 
 class GameDetailViewController: UIViewController {
@@ -36,6 +37,7 @@ class GameDetailViewController: UIViewController {
     }()
     
     override func viewDidLoad() {
+        self.title = "Game Detail"
         gameButton.addTarget(self, action: #selector(addToFavorite), for: .touchUpInside)
         super.viewDidLoad()
         setupView()
@@ -71,16 +73,21 @@ class GameDetailViewController: UIViewController {
         gameRating.anchor(top: gameGenre.bottomAnchor, right: scrollViewDelegate.contentView.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingRight: 10)
         gameButton.centerX(inView: scrollViewDelegate.scrollView)
         gameButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: 25, paddingRight: 25)
-        gameButton.withSystemIcon(name: "heart")
+        gameButton.isHidden = true
     }
     
     @objc func addToFavorite() {
-        print("success")
+        gameDetailPresenter?.addGameFavorite()
     }
 
 }
 
 extension GameDetailViewController: GameDetailViewProtocol {
+    
+    func updateStateFavoriteBtn(with state: String) {
+        self.gameButton.withSystemIcon(name: state)
+    }
+    
     func updateSuccesGame(with game: GameModel) {
         self.gameImage.sd_setImage(with: URL(string: game.backgroundImage)) {
             (image, error, cacheType, imageUrl) in
@@ -88,6 +95,7 @@ extension GameDetailViewController: GameDetailViewProtocol {
             self.gameDesc.text = game.description
             self.gameRelease.text = game.releaseDate
             _ = setStarRating(view: self.gameRating, rating: game.rating)
+            self.gameButton.isHidden = false
             
             for genre in game.genres {
                 let chip = MyChips(text: genre.name)

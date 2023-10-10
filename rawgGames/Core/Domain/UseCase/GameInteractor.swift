@@ -9,6 +9,8 @@ import Foundation
 protocol GameUseCase {
     func getGame(completion: @escaping (Result<[GameModel], Error>) -> Void)
     func getGameDetail(withID id: Int, completion: @escaping (Result<GameModel, Error>) -> Void)
+    func addGameFavorite(with game: GameModel, completion: @escaping (Int) -> Void)
+    func getGameWithID(withID id: Int, completion: @escaping (Bool) -> Void)
 }
 
 class GameInteractor: GameUseCase {
@@ -29,4 +31,17 @@ class GameInteractor: GameUseCase {
             result in completion(result)
         }
     }
+    
+    func addGameFavorite(with game: GameModel, completion: @escaping (Int) -> Void) {
+        gameRepository.addGameFavo(with: game) { result in
+            completion(result)
+        }
+    }
+    
+    func getGameWithID(withID id: Int, completion: @escaping (Bool) -> Void) {
+        gameRepository.getGameWithID(withID: id) { result in
+            completion(result)
+        }
+    }
+    
 }

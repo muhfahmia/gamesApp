@@ -8,7 +8,6 @@
 import Foundation
 
 struct GameModel: Hashable {
-    
     let id: Int
     let name: String
     let rating: Double

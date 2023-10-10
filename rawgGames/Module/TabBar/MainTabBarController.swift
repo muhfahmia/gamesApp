@@ -22,7 +22,7 @@ class MainTabBarController: UITabBarController {
     
     private func configureController() {
         let gamesListVC = GameRouter.startGame()
-        let favoriteVC = FavoriteViewController()
+        let favoriteVC = FavoriteRouter.startFavorite()
         let aboutVC = AboutViewController()
         let games = setupNavigationController(title: "Games", inactiveImage: UIImage(systemName: "gamecontroller")!, activeImage: UIImage(systemName: "gamecontroller.fill")!, rootViewController: gamesListVC)
         let favorite = setupNavigationController(title: "Favorite", inactiveImage: UIImage(systemName: "heart")!, activeImage: UIImage(systemName: "heart.fill")!, rootViewController: favoriteVC)

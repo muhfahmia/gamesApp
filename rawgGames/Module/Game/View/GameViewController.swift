@@ -38,7 +38,6 @@ class GameViewController: UIViewController, GameViewProtocol, UICollectionViewDe
     func updateSuccessGame(with games: [GameModel]) {
         self.gameDataSnapshot.appendItems(games, toSection: .gameList)
         self.gameDataSource.apply(self.gameDataSnapshot, animatingDifferences: true)
-//        print("update game from view: \(games)")
     }
     
     func setupCollectionView() {
