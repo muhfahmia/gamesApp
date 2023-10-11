@@ -16,7 +16,6 @@ protocol GameFavoriteDataSourceProtocol {
 }
 
 class GameFavoriteDataSource: GameFavoriteDataSourceProtocol {
-    
     private let container = NSPersistentContainer(name: "Game")
     private let context: NSManagedObjectContext
     private let gameEntity: NSEntityDescription

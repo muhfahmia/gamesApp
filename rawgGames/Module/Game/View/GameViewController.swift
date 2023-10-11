@@ -58,7 +58,7 @@ class GameViewController: UIViewController, GameViewProtocol, UICollectionViewDe
             collectionView: self.collectionView,
             cellProvider: { (collectionView, indexPath, game) -> UICollectionViewCell? in
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameCell.gameCellIdentifier, for: indexPath) as! GameCell
-                cell.configure(with: game)
+                cell.configure(with: game, deleteBtn: false)
                 return cell
             }
         )

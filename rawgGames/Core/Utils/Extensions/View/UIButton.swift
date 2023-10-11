@@ -23,19 +23,31 @@ class CustomButton: UIButton {
         case white
         case danger
     }
+    
+    enum ButtonSize {
+        case large
+        case normal
+        case small
+    }
 
     // Store the current button style
-    private var style: ButtonStyle = .primary
+    private var btnStyle: ButtonStyle = .primary
+    private var btnSize: ButtonSize = .normal
+    private var btnConfig = UIButton.Configuration.plain()
+    private var imagePadding = CGFloat(5)
+    private var imageSize: CGSize = CGSize(width: 25, height: 25)
 
     // Initializer to set the button's style and target action
-    init(style: ButtonStyle, title: String) {
+    init(title: String, btnStyle: ButtonStyle, btnSize: ButtonSize) {
         super.init(frame: .zero)
-        self.style = style
+        self.btnStyle = btnStyle
+        self.btnSize = btnSize
+        
         self.setTitle(title, for: .normal)
-        self.setHeight(35)
-        self.semanticContentAttribute = .forceRightToLeft
         self.isUserInteractionEnabled = true
+        
         applyStyle()
+        applyStyleSize()
     }
 
     required init?(coder: NSCoder) {
@@ -49,7 +61,7 @@ class CustomButton: UIButton {
 
     // Apply button style based on the selected style
     private func applyStyle() {
-        switch style {
+        switch btnStyle {
         case .primary:
             self.backgroundColor = .blue
             self.setTitleColor(.white, for: .normal)
@@ -70,10 +82,38 @@ class CustomButton: UIButton {
         }
     }
     
-    func withSystemIcon(name: String) {
-        var config = UIButton.Configuration.plain()
-        config.imagePadding = 10
-        self.setImage(UIImage(systemName: name), for: .normal)
-        self.configuration = config
+    private func applyStyleSize() {
+        switch btnSize {
+        case .large:
+            self.setHeight(40)
+            self.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+            self.btnConfig.imagePadding = self.imagePadding
+            self.configuration = self.btnConfig
+            self.imageSize = CGSize(width: 30, height: 30)
+        case .normal:
+            self.setHeight(40)
+            self.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+            self.btnConfig.imagePadding = self.imagePadding
+            self.imageSize = CGSize(width: 20, height: 20)
+        case .small:
+            self.setHeight(20)
+            self.btnConfig.imagePadding = self.imagePadding
+            self.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+            self.imageSize = CGSize(width: 15, height: 15)
+        }
     }
+    
+    func withSystemIcon(name: String) {
+        self.semanticContentAttribute = .forceRightToLeft
+        let imageSystem = UIImage(systemName: name)
+        if let resizedImage = imageSystem?.resizeImage(image: imageSystem, targetSize: self.imageSize) {
+            let imageView = UIImageView(image: resizedImage)
+            self.setImage(imageView.image, for: .normal)
+        }
+    }
+    
+    func setImagePadding(size: CGFloat) {
+        self.imagePadding = size
+    }
+    
 }

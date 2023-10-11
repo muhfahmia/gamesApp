@@ -10,6 +10,7 @@ import Foundation
 protocol FavoritePresenterProtocol {
     func getGameFavorite()
     var favoriteView: FavoriteViewProtocol? { get set }
+    func deleteGameFavorite(with game: GameModel)
 }
 
 class FavoritePresenter: FavoritePresenterProtocol {
@@ -28,6 +29,16 @@ class FavoritePresenter: FavoritePresenterProtocol {
                 self.favoriteView?.updateSuccessGame(with: data)
             case .failure(let error):
                 print(error)
+            }
+        }
+    }
+    
+    func deleteGameFavorite(with game: GameModel) {
+        gameFavoriteInteractor.deleteGameFavorite(with: game) { result in
+            if result == true {
+                self.favoriteView?.updateSuccessDelete(with: game)
+            }else{
+                print("gagal")
             }
         }
     }

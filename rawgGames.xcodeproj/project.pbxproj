@@ -42,6 +42,8 @@
 		5DCAFAAC2AD5B0330021C6C2 /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFAAB2AD5B0330021C6C2 /* FavoriteInteractor.swift */; };
 		5DCAFAAF2AD5B1AE0021C6C2 /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFAAE2AD5B1AE0021C6C2 /* FavoritePresenter.swift */; };
 		5DCAFAB22AD5B1C60021C6C2 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFAB12AD5B1C60021C6C2 /* FavoriteRouter.swift */; };
+		5DCAFAB42AD67FBC0021C6C2 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFAB32AD67FBC0021C6C2 /* UIImage.swift */; };
+		5DCAFAB72AD6984A0021C6C2 /* AboutSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAFAB62AD6984A0021C6C2 /* AboutSwiftUI.swift */; };
 		7879E94F9F7FC03D8DAC0241 /* Pods_rawgGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD9F9E41C514CB4306E8415 /* Pods_rawgGames.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,8 @@
 		5DCAFAAB2AD5B0330021C6C2 /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
 		5DCAFAAE2AD5B1AE0021C6C2 /* FavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
 		5DCAFAB12AD5B1C60021C6C2 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
+		5DCAFAB32AD67FBC0021C6C2 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		5DCAFAB62AD6984A0021C6C2 /* AboutSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSwiftUI.swift; sourceTree = "<group>"; };
 		DBEF4F9459706A4067D78392 /* Pods-rawgGames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rawgGames.release.xcconfig"; path = "Target Support Files/Pods-rawgGames/Pods-rawgGames.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -320,6 +324,7 @@
 				5DCAFA952AD505B50021C6C2 /* UIScrollView.swift */,
 				5DCAFA972AD543150021C6C2 /* MyChips.swift */,
 				5DCAFA992AD563F80021C6C2 /* UIButton.swift */,
+				5DCAFAB32AD67FBC0021C6C2 /* UIImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 		5DCAFA9D2AD595260021C6C2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5DCAFAB52AD6983E0021C6C2 /* SwiftUI */,
 				5DCAFA9E2AD595300021C6C2 /* AboutViewController.swift */,
 			);
 			path = View;
@@ -432,6 +438,14 @@
 				5DCAFAB12AD5B1C60021C6C2 /* FavoriteRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		5DCAFAB52AD6983E0021C6C2 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				5DCAFAB62AD6984A0021C6C2 /* AboutSwiftUI.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,6 +566,7 @@
 				5DCAFA942AD4553C0021C6C2 /* GameDetailRouter.swift in Sources */,
 				5D20D8D42ACA757800A5420A /* GamePresenter.swift in Sources */,
 				5DCAFA902AD454070021C6C2 /* GameDetailViewController.swift in Sources */,
+				5DCAFAB72AD6984A0021C6C2 /* AboutSwiftUI.swift in Sources */,
 				5DCAFAA82AD597220021C6C2 /* GameFavoriteDataSource.swift in Sources */,
 				5D52376A2AC8208700E22B63 /* UIView.swift in Sources */,
 				5DCAFA9A2AD563F80021C6C2 /* UIButton.swift in Sources */,
@@ -571,6 +586,7 @@
 				5DCAFA822AD3D3270021C6C2 /* GameModel.swift in Sources */,
 				5DCAFA862AD3E1500021C6C2 /* GameMapper.swift in Sources */,
 				5DCAFAA62AD5961B0021C6C2 /* Game.xcdatamodeld in Sources */,
+				5DCAFAB42AD67FBC0021C6C2 /* UIImage.swift in Sources */,
 				5D20D8D62ACA788900A5420A /* GameRouter.swift in Sources */,
 				5D5237462AC81C2000E22B63 /* AppDelegate.swift in Sources */,
 				5D5237482AC81C2000E22B63 /* SceneDelegate.swift in Sources */,

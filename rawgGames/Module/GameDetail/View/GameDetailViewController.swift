@@ -25,7 +25,7 @@ class GameDetailViewController: UIViewController {
     let gameDesc = MyLabel(labelType: .ParagraphNormal, labelColor: .black, labelNumRow: .zero)
     let gameImage = UIImageView()
     let gameRating = UIStackView()
-    var gameButton = CustomButton(style: .primary, title: "Add to Favorite")
+    var gameButton = CustomButton(title: "Add to Favorite", btnStyle: .primary, btnSize: .normal)
     
     private let gameGenre: UIStackView = {
         let stackView = UIStackView()

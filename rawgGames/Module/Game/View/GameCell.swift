@@ -12,12 +12,15 @@ import SDWebImage
 class GameCell: UICollectionViewCell {
     static let gameCellIdentifier = "gameCellID"
     
+    var favoPresenter: FavoritePresenterProtocol?
+    
+    var game: GameModel?
     let gameTitle = MyLabel(labelType: .H2, labelColor: .black, labelNumRow: .zero)
     let gameImage = UIImageView()
     let gameReleased = MyLabel(labelType: .ParagraphSmall, labelColor: .black, labelNumRow: .one)
     let gameRelease = MyLabel(labelType: .ParagraphSmall, labelColor: .black, labelNumRow: .one)
     let gameRating = UIStackView()
-    var deleteBtn: CustomButton?
+    var gameDeleteBtn: CustomButton?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,9 +39,11 @@ class GameCell: UICollectionViewCell {
     }
     
     func setupDeleteButton() {
-        deleteBtn = CustomButton(style: .danger, title: "Delete Favorite")
-        self.addSubview(deleteBtn!)
-        deleteBtn?.anchor(top: gameRating.bottomAnchor, left: self.leftAnchor, right: self.rightAnchor, paddingLeft: 15, paddingBottom: 10, paddingRight: 15)
+        gameDeleteBtn = CustomButton(title: "Delete Favorite", btnStyle: .danger, btnSize: .small)
+        gameDeleteBtn?.withSystemIcon(name: "trash.fill")
+        self.addSubview(gameDeleteBtn!)
+        gameDeleteBtn?.anchor(left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 10, paddingLeft: 15, paddingBottom: 10, paddingRight: 15)
+        gameDeleteBtn?.addTarget(self, action: #selector(deleteFavoGame), for: .touchUpInside)
     }
     
     func setupUIAutoLayout() {
@@ -49,7 +54,11 @@ class GameCell: UICollectionViewCell {
         gameRating.anchor(top: self.gameRelease.bottomAnchor, right: self.rightAnchor, paddingTop: 10, paddingRight: 5)
     }
     
-    func configure(with game: GameModel) {
+    func configure(with game: GameModel, deleteBtn: Bool) {
+        self.game = game
+        if deleteBtn == true {
+            setupDeleteButton()
+        }
         self.gameTitle.text = game.name
         self.gameImage.sd_imageIndicator = SDWebImageActivityIndicator.gray
         self.gameImage.sd_setImage(with: URL(string: game.backgroundImage))
@@ -60,6 +69,10 @@ class GameCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("Failed load gameCell")
+    }
+    
+    @objc func deleteFavoGame() {
+        favoPresenter?.deleteGameFavorite(with: self.game!)
     }
     
 }

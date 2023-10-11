@@ -11,6 +11,11 @@ import UIKit
 protocol FavoriteViewProtocol {
     var favoritePresenter: FavoritePresenterProtocol? { get set }
     func updateSuccessGame(with games: [GameModel])
+    func updateSuccessDelete(with game: GameModel)
+}
+
+protocol FavoriteDeleteGameProtocol {
+    func deleteGameAction(with game: GameModel)
 }
 
 class FavoriteViewController: UIViewController, UICollectionViewDelegate {
@@ -32,8 +37,6 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate {
         setupCollectionView()
         setupCollectionViewDataSource()
         setupCollectionCell()
-        
-        favoritePresenter?.getGameFavorite()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +45,7 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate {
     }
     
     func setupCollectionView() {
-        self.customCollectionLayout.customPadding(padding: 10, width: view.bounds.width, height: view.bounds.height/4, grid: 2)
+        self.customCollectionLayout.customPadding(padding: 10, width: view.bounds.width, height: view.bounds.height/3.5, grid: 2)
         favoCollectionView.collectionViewLayout = self.customCollectionLayout
         favoCollectionView.delegate = self
         favoCollectionView.backgroundColor = .lightGrayCustom
@@ -59,18 +62,33 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate {
             collectionView: self.favoCollectionView,
             cellProvider: { (collectionView, indexPath, game) -> UICollectionViewCell? in
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameCell.gameCellIdentifier, for: indexPath) as! GameCell
-                cell.configure(with: game)
+                cell.configure(with: game, deleteBtn: true)
+                cell.favoPresenter = self.favoritePresenter
                 return cell
             }
         )
         self.gameFavoDataSnapshot.appendSections([.gameFavo])
     }
     
+    func deleteAllItem() {
+        self.gameFavoDataSnapshot.deleteAllItems()
+        self.gameFavoDataSource.apply(self.gameFavoDataSnapshot, animatingDifferences: true)
+    }    
+
 }
 
 extension FavoriteViewController: FavoriteViewProtocol {
     func updateSuccessGame(with games: [GameModel]) {
+        deleteAllItem()
+        self.gameFavoDataSnapshot.appendSections([.gameFavo])
         self.gameFavoDataSnapshot.appendItems(games, toSection: .gameFavo)
         self.gameFavoDataSource.apply(self.gameFavoDataSnapshot, animatingDifferences: true)
+        
+    }
+    
+    func updateSuccessDelete(with game: GameModel) {
+        self.gameFavoDataSnapshot.deleteItems([game])
+        self.gameFavoDataSource.apply(self.gameFavoDataSnapshot,animatingDifferences: true)
     }
 }
+
