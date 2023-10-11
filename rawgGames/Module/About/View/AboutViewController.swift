@@ -19,8 +19,9 @@ class AboutViewController: UIViewController {
         // Add the hosting controller's view as a child view
         addChild(hostingController)
         let hostingView = hostingController.view
+        hostingView?.backgroundColor = .lightGrayCustom
         view.addSubview(hostingView!)
-        hostingView!.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+        hostingView!.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor)
         hostingController.didMove(toParent: self)
         
     }

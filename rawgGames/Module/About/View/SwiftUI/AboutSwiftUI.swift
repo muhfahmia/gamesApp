@@ -22,13 +22,16 @@ struct AboutSwiftUI: View {
                 
                 Text("Muh Fahmi Ardiyanto")
                     .font(.largeTitle)
+                    .foregroundColor(Color.black)
                 Text("Junior iOS Developer")
                     .font(.body)
                     .foregroundColor(.gray)
+                    .foregroundColor(Color.black)
                 Text("fahmiardiyannto@yahoo.com")
                     .font(.headline)
                 Text("+6281315656535")
                     .font(.headline)
+                    .foregroundColor(Color.black)
                 ZStack(alignment: .topLeading) {
                     RoundedRectangle(cornerRadius: 5)
                     .fill(Color.white)
@@ -37,9 +40,11 @@ struct AboutSwiftUI: View {
                     VStack {
                         Text("Hellow Code Reviewers, I am a junior iOS freelance worker. Before as Junior iOS Dev I am a Web Developer for 3 years experience.")
                             .padding()
+                            .foregroundColor(Color.black)
                         
                         Text("If there is any information about jobs related to iOS development, I am interested in applying for the job")
                             .padding()
+                            .foregroundColor(Color.black)
                     }
                                 
                 }
